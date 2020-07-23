@@ -43,7 +43,7 @@ def diseasesDetect(img):
         #return ("Ayyappan")
         return("Bacterial Leaf Blight")
 
-application=app=Flask(__name__)
+app=Flask(__name__)
 @app.route('/api/upload',methods=['POST'])
 def upload():
     img=cv2.imdecode(np.fromstring(request.files['file'].read(),np.uint8),cv2.IMREAD_UNCHANGED)
